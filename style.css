@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 1em;
+}
+
+.search-bar {
+    margin: .5em auto;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input-field {
+    font-family: "Montserrat", sans-serif;
+    width: 70%;
+    padding: .8em;
+    padding-right: 7em;
+    padding-left: 2em;
+    font-size: 1.2em;
+    border-radius: .4em;
+    outline: none;
+    border: 1px solid cornflowerblue;
+}
+
+.search-btn {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: -100px;
+    padding: .9em 1.5em;
+    background-color: cornflowerblue;
+    border-radius: .4em;
+    color: white;
+    outline: none;
+    border: none;
+    transition: all .2s;
+}
+
+.search-btn:focus {
+    border: 2px solid cornflowerblue;
+}
+
+.search-btn:hover {
+    background-color: rgb(85, 122, 191);
+}
+
+.search-btn:active {
+    scale: .9;
+}
+
+.start {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 2rem;
+    padding: .5rem 1em;
+    /* background-color: cornflowerblue; */
+    width: 100%;
+    text-align: center;
+    /* color: white; */
+}
+
+.input-value {
+    background-color: cornflowerblue;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+    padding: 1em;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.movie-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    border: 1px solid cornflowerblue;
+}
+
+.movie-card {
+    border: 1px solid;
+    position: relative;
+    margin: 1.5rem;
+    border-radius: .7em;
+    transition: all .4s;
+    width: 310px;
+    height: 460px;
+}
+
+.poster {
+    width: 100%;
+    border-radius: .7em;
+    height: 100%;
+}
+
+.title {
+    position: absolute;
+    border-bottom-left-radius: .7em;
+    border-bottom-right-radius: .7em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: cornflowerblue;
+    text-align: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    color: white;
+    padding: .5em;
+
+}
+
+.movie-card:hover {
+    scale: 1.05;
+}
+
+.spinner {
+    padding-top: 50px;
+    border-left: 2px solid cornflowerblue;
+    display: block;
+    border-radius: 50%;
+    animation-name: spinner;
+    animation-duration: .9s;
+    animation-delay: .1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+}
+
+.spinner-container{
+    margin-top: 90px;
+}
+.hidden {
+    display: none;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .input-field {
+        width: 100%;
+        padding-right: 6em;
+        padding-left: 1em;
+    }
+
+    .input-value {
+        text-align: center;
+    }
+}
