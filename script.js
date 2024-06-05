@@ -25,9 +25,12 @@ const searchMovie = async () => {
   let userinput = search.value;
   userinput = userinput.trim();
   let response = await axios(`${searchAPI}&s=${userinput}`);
-  console.log(response);
   try {
-    if (response.status === 200) {
+    if (response.data.Response === "False") {
+      spinner.classList.add("hidden");
+      movieSection.innerHTML = `<h1 class='start'>No Result Found.🎃</h1>`;
+    } else {
+      console.log(response.data);
       spinner.classList.add("hidden");
       let data = response.data.Search;
       data.forEach((element) => {
@@ -49,9 +52,6 @@ const searchMovie = async () => {
         MovieContainer.append(Title);
         MovieContainer.append(Poster);
       });
-    } else if (response.message === "Network Error") {
-      console.log("Network Error");
-      console.log(response);
     }
   } catch (error) {
     console.warn(error);
@@ -65,6 +65,6 @@ searchBtn.addEventListener("click", () => {
     movieSection.innerHTML = "";
     searchMovie();
   } else {
-    movieSection.innerHTML = "<div class='start'>No Result Found.</div>";
+    movieSection.innerHTML = "<h1 class='start'>No Result Found. 🎃</h1>";
   }
 });
