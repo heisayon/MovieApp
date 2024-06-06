@@ -8,17 +8,34 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <nav class="nav-bar">
+      <a href="https://github.com/heisayon"
+        ><img src="./Assets/icons8-github-50.png"
+      /></a>
+      <a href="https://facebook.com/heisayon"
+        ><img src="./Assets/icons8-facebook-50.png"
+      /></a>
+      <a href="https://x.com/heisayon?s=08">
+        <img src="./Assets/icons8-twitterx-50.png"
+      /></a>
+    </nav>
     <div class="container">
       <section class="search-bar">
         <input type="text" id="search" class="input-field" />
         <button id="search-btn" class="search-btn">Search</button>
       </section>
+
       <div class="input-value" id="user-value"></div>
       <main id="movie-section" class="movie-section">
         <p class="start">Search and Get Started</p>
+        <i class="fa fa-github" aria-hidden="true"></i>
       </main>
       <div class="spinner-container">
         <div class="spinner hidden" id="spinner"></div>

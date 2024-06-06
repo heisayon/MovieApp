@@ -6,12 +6,28 @@
     margin: 0;
 }
 
+.nav-bar {
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid;
+    border-bottom-right-radius: .4em;
+    border-bottom-left-radius: .4em;
+    display: flex;
+    /* padding: .7em .5em; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .container {
     padding: 1em;
 }
 
 .search-bar {
-    margin: .5em auto;
+    margin: 5em auto;
     width: 100%;
     padding: 1em;
     display: flex;
@@ -139,9 +155,10 @@
     height: 50px;
 }
 
-.spinner-container{
+.spinner-container {
     margin-top: 90px;
 }
+
 .hidden {
     display: none;
 }
